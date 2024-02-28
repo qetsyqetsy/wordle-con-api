@@ -1,0 +1,74 @@
+body {
+  font-family: 'Courier New', Courier, monospace; /* Cambio de fuente a una fuente de máquina de escribir */
+  background-color: #f8f4e3; /* Un tono crema para un aspecto vintage */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #5a4535; /* Un tono de marrón oscuro para un aspecto retro */
+  font-size: 36px; /* Aumentar el tamaño de la fuente para un aspecto más llamativo */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+}
+
+#guess-input {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  font-size: 18px;
+  width: 250px;
+  border: 2px solid #5a4535; /* Un borde más grueso en un tono de marrón oscuro */
+  background-color: #fff; /* Fondo blanco */
+}
+
+#guess-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #5a4535; /* Un tono de marrón oscuro para el fondo del botón */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer; /* Cambio de cursor a mano para indicar que es interactivo */
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.letter {
+  border: 1px solid #5a4535; /* Borde más grueso en un tono de marrón oscuro */
+  padding: 5px;
+  margin: 5px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+  background-color: #f8f4e3; /* Fondo crema para las letras */
+  color: #5a4535; /* Color de texto marrón oscuro */
+  font-weight: bold; /* Fuente en negrita para resaltar */
+}
+
+.row {
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.input-area {
+  margin: 30px;
+}
+
+#grid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#guesses {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  color: #5a4535; /* Color de texto marrón oscuro */
+}
