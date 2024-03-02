@@ -7,13 +7,19 @@ const confettiDiv = document.getElementById('confetti');
 const again = document.getElementById("try-again");
 
 // Datos del juego
-const diccionario = ['ABEJA', 'BELLO', 'CABLE', 'DULCE', 'ELEVO', 'FLORA',
-                    'GLOBO', 'HELIO', 'IGUAL', 'JUEGO', 'LLAVE', 'MUCHO',
-                    'NADAR', 'OROJO', 'PLOMO', 'QUESO', 'RUIDO', 'SILLA', 
-                    'TABLA', 'VAPOR', 'XENÓN', 'YOGUR'];
+const UrlApi="https://random-word-api.herokuapp.com/word?length=5&lang=en";
 
-const palabra = obtenerPalabraAleatoria(diccionario);
+fetch(UrlApi).then(response => response.json())
+    .then(response => {
+        palabra = response[0].toUpperCase()
+})
+.catch(err => { console.log("mensaje de error")
+let diccionario = ['APPLE', 'CRAZY', 'WINGS', 'WORDS','FRUIT','GREEN']
+palabra = diccionario[Math.floor(Math.random() * diccionario.length)];
+});
+
 let intentos = 6;
+
 
 // Listeners de eventos
 window.addEventListener('load', inicializar);
